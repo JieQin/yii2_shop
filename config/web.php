@@ -6,7 +6,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'site',
+    'defaultRoute' => 'index',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -27,16 +27,18 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => false,
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.163.com',
-                'username' => 'imooc_shop@163.com',
-                'password' => 'imooc123',
-                'port' => '465',
-                'encryption' => 'ssl',
-            ],
-
+	    'useFileTransport' => false,
+	    'transport' => [
+		'class' => 'Swift_SmtpTransport',
+		'host' => 'smtp.163.com',
+		'username' => '15600045558@163.com',
+		'password' => '521hudie',
+		'port' => '465',
+		'encryption' => 'ssl',	
+	    ],
+	    'messageConfig' => [
+		'charset' => 'UTF-8',
+	    ]
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
