@@ -38,7 +38,8 @@ $config = [
 	    ],
 	    'messageConfig' => [
 		'charset' => 'UTF-8',
-	    ]
+		'from' => ['15600045558@qq.com'=>'admin'],
+	    ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

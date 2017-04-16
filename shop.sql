@@ -19,6 +19,7 @@ CREATE TABLE `imooc_user`(
 `username` VARCHAR(32) NOT NULL DEFAULT '' COMMENT'会员名称',
 `userpass` CHAR(32) NOT NULL DEFAULT '' COMMENT'会员密码',
 `useremail` VARCHAR(100) NOT NULL DEFAULT '' COMMENT'会员邮箱',
+`createtime` INT UNSIGNED NOT NULL DEFAULT '' COMMENT'创建时间',
 UNIQUE shop_user_username_userpass(`username`, `userpass`),
 UNIQUE shop_user_useremail_userpass(`useremail`, `userpass`),
 PRIMARY KEY(`userid`)
