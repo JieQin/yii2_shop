@@ -22,4 +22,8 @@ class MemberController extends Controller{
 		}	
 		return $this->render('auth', ['model'=>$model]);
 	}
+	public function actionQqlogin()
+	{
+		
+	}
 }

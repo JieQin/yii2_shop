@@ -39,3 +39,12 @@ CREATE TABLE `imooc_profile`(
 PRIMARY KEY(`id`),
 UNIQUE shop_profile_userid(`userid`)
 )ENGINE=innoDB DEFAULT CHARSET=utf8;
+//商品分类表
+CREATE TABLE `imooc_category`(
+`cateid` BIGINT UNSIGNED NOT NULL AOTU_INCREMENT COMMENT'商品分类ID',
+`title` VARCHAR(32) NOT NULL DEFAULT '' COMMENT'分类名称',
+`parentid` BIGINT UNSIGNED NOT NULL DEFAULT'0' COMMENT'父类ID',
+`createtime` INT UNSIGNED NOT NULL DEFUALT'0' COMMENT'创建时间',
+PRIMARY KEY(`cateid`),
+KEY shop_category_parentid(`parentid`)
+)ENGINE=innoDB DEFAULT CHARSET=utf8;
